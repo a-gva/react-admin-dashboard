@@ -1,6 +1,8 @@
-import { useState } from 'react'
-import './App.css'
+import Sidebar from './components/sidebar/Sidebar'
 import Topbar from './components/topbar/Topbar'
+import Home from './pages/home/Home'
+import './App.css'
+import { useState } from 'react'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,7 +10,10 @@ function App() {
   return (
     <div className="App">
       <Topbar />
-      <h1>Hello</h1>
+      <div className="container">
+        <Sidebar />
+        <Home />
+      </div>
     </div>
   )
 }
